@@ -1,0 +1,28 @@
+<org-header></org-header>
+<div class="max-w-[1110px] mx-auto">
+    <h1 class="header">this is admin page</h1>
+
+    <table class="mb-16">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Store Tax Id</th>
+        <th>Store Name</th>
+        <th>Market Enabled</th>
+      </tr>
+      <tr *ngFor="let user of employees">
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName}}</td>
+        <td>{{ user.email}}</td>
+        <td>{{ user.storeTaxId}}</td>
+        <td>{{ user.storeName}}</td>
+        <td>
+          <button orgButton class="bg-clr-Green" *ngIf="user.status === 1" [class.active]="user.status" (click)="activateEmployee(user)">Active</button>
+          <button orgButton class="bg-clr-Red" *ngIf="user.status === 2" [class.blocked]="!user.status" (click)="blockEmployee(user)">Block</button>          
+        </td>
+      </tr>
+    </table>
+
+</div>
+<org-footer></org-footer>

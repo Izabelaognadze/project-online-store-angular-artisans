@@ -1,0 +1,199 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "XX99 MARK II HEADPHONES",
+      "category": "headphones",
+      "summary": "this is summary",
+      "description": "this is description",
+      "Img": "assets/product-xx99-mark-two-headphones/desktop/image-product.jpg",
+      "imageThumbnail": "assets/cart/image-xx99-mark-two-headphones.jpg",
+      "price": "2999",
+      "status": 1
+    },
+    {
+      "id": 3,
+      "name": "XX59 HEADPHONES",
+      "category": "headphones",
+      "summary": "this is summary",
+      "description": "this is description",
+      "Img": "assets/product-xx59-headphones/desktop/image-product.jpg",
+      "imageThumbnail": "assets/cart/image-xx59-headphones.jpg",
+      "price": "899",
+      "status": 1
+    },
+    {
+      "id": 4,
+      "name": "ZX9 SPEAKER",
+      "category": "speakers",
+      "summary": "this is summary",
+      "description": "this is description",
+      "Img": "assets/product-zx9-speaker/desktop/image-product.jpg",
+      "imageThumbnail": "assets/cart/image-zx9-speaker.jpg",
+      "price": "4500",
+      "status": 1
+    },
+    {
+      "id": 5,
+      "name": "ZX7 SPEAKER",
+      "category": "speakers",
+      "summary": "this is summary",
+      "description": "this is description",
+      "Img": "assets/product-zx7-speaker/desktop/image-product.jpg",
+      "imageThumbnail": "assets/cart/image-zx7-speaker.jpg",
+      "price": "3500",
+      "status": 1
+    },
+    {
+      "id": 6,
+      "name": "YX1 WIRELESS EARPHONES",
+      "category": "earphones",
+      "summary": "this is summary",
+      "description": "this is description",
+      "Img": "assets/category-earphones/des-image-yx1-earphones.jpg",
+      "imageThumbnail": "assets/cart/image-yx1-earphones.jpg",
+      "price": "599",
+      "status": 1
+    },
+    {
+      "id": "ef69bd7c-6783-40c4-b1ae-41eea54530f1",
+      "name": "fdsfds",
+      "category": 2,
+      "summary": "dfsfds",
+      "description": "fdsdfs",
+      "img": "dfsfds",
+      "imageThumbnail": "sdffds",
+      "price": "552",
+      "status": 1
+    },
+    {
+      "id": "505dad62-79a0-4c5f-92d1-83087505d19b",
+      "name": "sdffds",
+      "category": 3,
+      "summary": "sfdfsd",
+      "description": "sdfdfs",
+      "img": "dsfdfs",
+      "imageThumbnail": "fdfsd",
+      "price": "dfsfds",
+      "status": 1
+    },
+    {
+      "id": "919e7164-8497-4d88-9008-57fd7d49764f",
+      "name": "sfdfsd",
+      "category": 2,
+      "summary": "fsdfsd",
+      "description": "fsdfsd",
+      "img": "sfdfds",
+      "imageThumbnail": "fdsfsd",
+      "price": "fdsdfs",
+      "status": 1
+    },
+    {
+      "id": "c9dcbdf9-39ef-41dd-a8cf-c16745283e6c",
+      "name": "fdsfsd",
+      "category": 3,
+      "summary": "gfdfgds",
+      "description": "gsfdsgfd",
+      "img": "gfdsfgd",
+      "imageThumbnail": "sfgdfgsd",
+      "price": "sfgdfgds",
+      "status": 1
+    },
+    {
+      "id": "55b4250c-3a3f-407d-9285-c2622c2b8c51",
+      "name": "fdsfds",
+      "category": 1,
+      "summary": "dsffd",
+      "description": "sdfdfs",
+      "img": "sdffsd",
+      "imageThumbnail": "sdffds",
+      "price": "dfsfd",
+      "status": 1
+    },
+    {
+      "id": "c7bb2386-2ebd-4129-b3ba-5a54320f6162",
+      "name": "fgdfgd",
+      "category": 2,
+      "summary": "dfgfdg",
+      "description": "dfgfdg",
+      "img": "dfgfdg",
+      "imageThumbnail": "dfgfdg",
+      "price": "fdgfgd",
+      "status": 2
+    },
+    {
+      "id": "22bb0cda-451e-494c-b59c-01db0eec784c",
+      "name": "fdgfdg",
+      "category": 2,
+      "summary": "fdgfdg",
+      "description": "dfgdfg",
+      "img": "dfgfdg",
+      "imageThumbnail": "fdgfdg",
+      "price": "dfgfgd",
+      "status": 2
+    }
+  ],
+  "users": [
+    {
+      "email": "isabella.ognadze@gmail.com",
+      "password": "$2a$10$Fln6ZknsUdCRw8fwppwkt.6vSKraQwfv/yX1bJrqrAcY1mlwGr9j2",
+      "id": "1c2387c5-c04d-477f-82a6-e9d9cf2d1a0e",
+      "firstName": "Izabela",
+      "lastName": "Ognadze",
+      "userType": 3
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$Fln6ZknsUdCRw8fwppwkt.6vSKraQwfv/yX1bJrqrAcY1mlwGr9j2",
+      "id": "1c2387c5-c04d-477f-82a6-e9d9cf2d1a0e",
+      "firstName": "Izabela",
+      "lastName": "Ognadze",
+      "userType": 1
+    },
+    {
+      "email": "store@store.com",
+      "password": "$2a$10$ROyOLkLHt/GRsx695xRA2OJcNqlX2iWKtXyq1W8YtGYWqmE2Vp7B.",
+      "id": "cd36b0ab-f620-479d-8f4e-da77c113b553",
+      "products": [
+        1,
+        2,
+        3
+      ],
+      "approved": false,
+      "firstName": "ds",
+      "lastName": "sd",
+      "storeName": "store",
+      "storeTaxId": null,
+      "status": 2,
+      "userType": 2
+    },
+    {
+      "email": "store@stor.com",
+      "password": "$2a$10$M9jUB5GyI9fSkFvu14p64eo/PceRHshYiaTdQI8x61L0VlGxKE1kC",
+      "id": "d2b235f8-248b-4b15-9208-fd8f2346ce13",
+      "products": [
+        "22bb0cda-451e-494c-b59c-01db0eec784c"
+      ],
+      "approved": false,
+      "firstName": "ads",
+      "lastName": "ads",
+      "storeName": "asd",
+      "storeTaxId": null,
+      "status": 1,
+      "userType": 2
+    },
+    {
+      "email": "izabela.og@gmail.com",
+      "password": "$2a$10$qyTma1GJ5o2r//AHJjOpQ.pXCNLos3FwLFDcDB4GCI0rHJ/FWhmre",
+      "id": "cc4c8814-ca2d-432b-bf9b-01bbc520e36c",
+      "products": [],
+      "approved": false,
+      "firstName": "fsd",
+      "lastName": "fsd",
+      "storeName": "fsd",
+      "storeTaxId": null,
+      "status": 1,
+      "userType": 2
+    }
+  ]
+}

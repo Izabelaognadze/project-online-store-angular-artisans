@@ -1,0 +1,36 @@
+<div class="flex gap-4 max-w-[1110px] mx-auto">
+
+    <div class="max-w-80 mx-auto mt-40">
+        <h1 class="text-3xl uppercase mb-10 font-bold tracking-widest">Register User</h1>
+        <form [formGroup]="registerCustomerGroup" (ngSubmit)="onCustomerRegister()" class="flex flex-col gap-4 items-center">
+            <input type="text" placeholder="First Name" formControlName="firstName" orgInput>
+            <input type="text" placeholder="Last Name" formControlName="lastName" orgInput>
+            <input type="email" placeholder="Email" formControlName="email" orgInput>
+            <input type="password" placeholder="Password" formControlName="password" orgInput>
+            <div class="flex w-full justify-between">
+                <a routerLink="/login" orgButton variant="Button2"> Log In</a>
+                <button type="submit" orgButton>register</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="max-w-80 mx-auto mt-40">
+        <h1 class="text-3xl uppercase mb-10 font-bold tracking-widest">store registration form</h1>
+        <form [formGroup]="registerEmployeeGroup" (ngSubmit)="onEmployeeRegister()" class="flex flex-col gap-4 items-center">
+            <input type="text" placeholder="Store Name" formControlName="storeName" orgInput>
+            <input type="text" placeholder="Store Tax Id" formControlName="storeTaxId" orgInput>
+            <input type="email" placeholder="Employee Email" formControlName="email" orgInput>
+            <input type="text" placeholder="Employee Fisrt Name" formControlName="firstName" orgInput>
+            <input type="text" placeholder="Employee Last Name" formControlName="lastName" orgInput>
+            <input type="password" placeholder="Password" formControlName="password" orgInput>
+            <div class="flex w-full justify-between">
+                <a routerLink="/login" orgButton variant="Button2"> Log In</a>
+                <button type="submit" orgButton >register</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<p *ngIf="SuccessMessage" class="text-lg capitalize text-clr-Green mt-8 text-center">you have registered successfully</p>
+<p class="card-header" class="text-lg capitalize text-clr-Red mt-8 text-center">{{ userError }}</p>

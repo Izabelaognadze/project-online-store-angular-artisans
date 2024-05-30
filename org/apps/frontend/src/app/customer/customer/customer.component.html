@@ -1,0 +1,28 @@
+<org-header></org-header>
+<org-search></org-search>
+<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-12 max-w-[1112px] mx-auto" >
+    <ng-container *ngFor="let item of data | paginate: {itemsPerPage: 10, currentPage: p}">
+        <li class="p-4 rounded shadow-md border-l-rose-50">
+            <a routerLink="/item/{{item.id}}">
+                <img src={{item.imageThumbnail}} alt="" class="w-full h-auto mb-2">
+                <div class="content">
+                    <div class="name text-base sm:text-lg font-bold mb-1">
+                        {{item.name}}
+                    </div>
+                    <div class="category text-gray-600 text-sm sm:text-base mb-1">
+                        {{item.category}}
+                    </div>
+                    <div class="price text-green-500 font-bold text-sm sm:text-base">
+                        {{item.price|currency}}
+                    </div>
+                </div>
+            </a>
+    </li>
+    </ng-container>
+</ul>
+<div class="max-w-[1110px] mx-auto">
+    <pagination-controls (pageChange)="onPageChange($event)" class=" max-w-[1112px] mx-auto bg-red-500"></pagination-controls>
+</div>
+<org-footer></org-footer>
+
+

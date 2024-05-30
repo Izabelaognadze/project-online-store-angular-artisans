@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.common-margins {
+  @apply mx-6 md:mx-10 lg:mx-16 xl:mx-auto max-w-[1110px];
+}
+
+.header {
+  @apply my-12 text-4xl font-extrabold leading-none tracking-wide text-clr-Yellow md:text-5xl lg:text-4xl uppercase;
+}
+.head {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 900;
+  color: rgb(10, 162, 172);
+}

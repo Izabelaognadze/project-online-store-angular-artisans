@@ -1,0 +1,13 @@
+<div class="max-w-80 w-full mx-auto mt-40">
+    <h1 class="text-3xl uppercase mb-10 font-bold tracking-widest">Log In</h1>
+    <form [formGroup]="loginGroup" (ngSubmit)="loginUser()" class="flex flex-col gap-4">
+        <input type="email" placeholder="Email" formControlName="email" orgInput>
+        <input type="password" placeholder="Password" formControlName="password" orgInput>
+        <div class="flex w-full justify-between">
+            <a routerLink="/register" orgButton variant="Button2">register</a>
+            <button type="submit" orgButton>login</button>
+        </div>
+    </form>
+</div>
+
+<p class="card-header" class="text-lg capitalize text-clr-Red mt-8 text-center">{{ userError }}</p>

@@ -1,0 +1,30 @@
+label {
+  @apply text-base font-semibold py-1 px-2 uppercase last:mr-0 mr-1;
+}
+
+.selected {
+  @apply bg-slate-500;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#editor {
+  width: 700px;
+  text-align: center;
+  justify-content: center;
+}

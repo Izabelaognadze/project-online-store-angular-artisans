@@ -1,0 +1,16 @@
+<div class="bg-slate-300">
+    <div class="max-w-[1110px] mx-auto flex justify-between items-center py-5">
+        <div class="">
+            <div class="" *ngIf="!isSignedIn" >...</div>
+            <div class="font-bold text-lg uppercase text-clr-Red tracking-widest" *ngIf="isSignedIn" >Welcome {{ userName }}</div>
+        </div>
+        <div class="flex gap-5">
+            <a *ngIf="!isSignedIn" routerLink="/login" orgButton>log in</a>
+            <a *ngIf="!isSignedIn" routerLink="/register" orgButton variant="Button2">register</a>
+            <a href="#" routerLink="/cartpage" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
+                Cart
+            </a>
+            <button (click)="onLogout()" *ngIf="isSignedIn" orgButton>Logout</button>
+        </div>
+    </div>
+</div>

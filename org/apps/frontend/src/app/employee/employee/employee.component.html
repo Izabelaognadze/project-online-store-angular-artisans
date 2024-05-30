@@ -1,0 +1,147 @@
+<org-header></org-header>
+
+<h1 class="header max-w-[1110px] mx-auto">this is Employee page</h1>
+
+<form [formGroup]="addFormGroup" (ngSubmit)="addProduct()" class="flex flex-col max-w-[1110px] mx-auto gap-2 mb-10">
+    <h1 class="head">Add Item</h1>
+    <label for="">name</label>
+    <input formControlName="name" placeholder="name" orgInput />
+    <label for="">category</label>
+    <select formControlName="category" id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <option *ngFor="let item of category" [ngValue]="item">{{item}}</option>
+      </select>
+    <label for="">summary</label>
+    <input formControlName="summary" placeholder="summary" orgInput/>
+    <label for="">description</label>
+    <input formControlName="description" placeholder="description" orgInput/>
+    <div id="editor">
+        <input formControlName="description" placeholder="description" orgInput/>
+    </div>
+    <label for="">image</label>
+    <input formControlName="img" placeholder="img" orgInput/>
+    <label for="">image Thumbnail</label>
+    <input formControlName="imageThumbnail" placeholder="imageThumbnail" orgInput/>
+    <label for="">price</label>
+    <input formControlName="price" placeholder="price" orgInput/>
+    <button [disabled]="!addFormGroup.valid" type="submit" orgButton>Add Product</button>
+</form>
+
+<div class="max-w-[1110px] mx-auto flex gap-28">
+    <div class="">
+        <input orgInput [formControl]="searchField" placeholder="search Product By name" />
+        <br />
+        <div *ngFor="let i of searchResults$ | async">
+        {{ i.name }}
+        </div>
+    </div>
+
+    <div class="">
+        <input orgInput [formControl]="searchFieldStatus" placeholder="search Product By Status" />
+        <br />
+        <div *ngFor="let i of searchResultsStatus$ | async">
+            <p *ngIf="i.status === 1">Active</p>
+            <p *ngIf="i.status === 2">disabled</p>
+        </div>
+    </div>
+    <p class="text-clr-Red">if you like to seatch active products write 1 in search bar. or else 2</p>
+</div>
+
+<h1 class="head text-center mt-7">order management page</h1>
+
+<form action="" [formGroup]="editFormGroup" class="mb-10">
+    <table>
+        <tr>
+            <th>name</th>
+            <th>category</th>
+            <th>summary</th>
+            <th>description</th>
+            <th>img</th>
+            <th>imageThumbnail</th>
+            <th>price</th>
+            <th>status</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+        <tr *ngFor="let i of products" class="row" [ngClass]="{selected: editingProducts?.id === i.id}">
+    
+            <td>
+                <div class="cell">
+                    <span *ngIf="editingProducts?.id !== i.id"> {{ i.name }} </span>
+                    <input *ngIf="editingProducts?.id === i.id" formControlName="name" placeholder="name" />
+                </div>
+            </td>
+    
+            <td>
+                <div class="cell">
+                    <span *ngIf="editingProducts?.id !== i.id"> {{ i.category }} </span>
+                    <input *ngIf="editingProducts?.id === i.id" formControlName="category"
+                        placeholder="category" />
+                </div>
+            </td>
+    
+            <td>
+                <div class="cell">
+                    <span *ngIf="editingProducts?.id !== i.id"> {{ i.summary }} </span>
+                    <input *ngIf="editingProducts?.id === i.id" formControlName="summary"
+                        placeholder="summary" />
+                </div>
+            </td>
+    
+            <td>
+                <div class="cell">
+                    <span *ngIf="editingProducts?.id !== i.id"> {{ i.description }} </span>
+                    <input *ngIf="editingProducts?.id === i.id" formControlName="description"
+                        placeholder="description" />
+                </div>
+            </td>
+    
+            <td>
+                <div class="cell">
+                    <span *ngIf="editingProducts?.id !== i.id"> {{ i.img }} </span>
+                    <input *ngIf="editingProducts?.id === i.id" formControlName="img"
+                        placeholder="img" />
+                </div>
+            </td>
+    
+            <td>
+                <div class="cell">
+                    <span *ngIf="editingProducts?.id !== i.id"> {{ i.imageThumbnail }} </span>
+                    <input *ngIf="editingProducts?.id === i.id" formControlName="imageThumbnail"
+                        placeholder="imageThumbnail" />
+                </div>
+            </td>
+    
+            <td>
+                <div class="cell">
+                    <span *ngIf="editingProducts?.id !== i.id"> {{ i.price }} </span>
+                    <input *ngIf="editingProducts?.id === i.id" formControlName="price"
+                        placeholder="price" />
+                </div>
+            </td>
+    
+            <td>
+                <div class="cell">
+                    <button orgButton class="bg-clr-Green" *ngIf="i.status === 1" [class.active]="i.status" (click)="activateProduct(i)">Active</button>
+                    <button orgButton class="bg-clr-Red" *ngIf="i.status === 2" [class.blocked]="!i.status" (click)="blockPriduct(i)">Block</button>
+                </div>
+            </td>
+    
+            <td>
+                <div class="cell">
+                    <button (click)="editProducts(i)" *ngIf="editingProducts?.id !== i.id" orgButton>edit</button>
+                    <button *ngIf="editingProducts?.id === i.id" [disabled]="!editFormGroup.valid"
+                        (click)="updateProduct()" orgButton class="bg-clr-Yellow">update</button>
+                </div>
+            </td>
+    
+            <td>
+                <div class="cell" >
+                    <button *ngIf="editingProducts?.id !==i.id" (click)="deleteProduct(i.id)" orgButton class="bg-clr-Red">delete</button>
+                    <button *ngIf="editingProducts?.id === i.id" (click)="cancelEditProducts()" orgButton class="bg-clr-Red">cancel</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<org-footer></org-footer>
